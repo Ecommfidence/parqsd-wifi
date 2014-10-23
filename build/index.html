@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="index">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>pageTitle</title>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/v3.2.0/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <hearder><br></hearder>
+    <section class="container">
+      <form role="form" ng-controller="indexCtrl" class="row">
+        <div class="col-xs-1 col-sm-2 col-md-4"></div>
+        <div class="col-xs-10 col-sm-8 col-md-4">
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="form-group">
+                <input id="firstName" type="text" placeholder="First Name" ng-model="fname" required class="form-control">
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="form-group">
+                <input id="lastName" type="text" placeholder="Last Name" ng-model="lname" required class="form-control">
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <div ng-class="{'has-error':errorInEmail}" class="form-group">
+                <input id="inputEmail" type="email" placeholder="Enter email" ng-model="email" required class="form-control">
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <button ng-click="fetch()" class="btn btn-primary">Fetch me some wifi!</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-1 col-sm-2 col-md-4"></div>
+      </form>
+    </section>
+    <script type="text/javascript" src="vendor/jquery/v2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/angular/v1.3.0/angular.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/v3.2.0/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="index.min.js"></script>
+    <script type="text/javascript" src="//localhost:35720/livereload.js"></script>
+  </body>
+</html>

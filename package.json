@@ -1,0 +1,33 @@
+{
+  "name": "parqsd-wifi",
+  "version": "0.0.0",
+  "description": "parqsd-wifi\r ===========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ecommfidence/parqsd-wifi.git"
+  },
+  "author": "Pablo Garcia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ecommfidence/parqsd-wifi/issues"
+  },
+  "homepage": "https://github.com/Ecommfidence/parqsd-wifi",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jade": "^0.13.0",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-karma": "^0.9.0",
+    "karma": "^0.12.24",
+    "karma-chrome-launcher": "^0.1.5",
+    "karma-jasmine": "^0.1.5",
+    "less": "^1.7.5",
+    "protractor": "^1.3.1"
+  }
+}

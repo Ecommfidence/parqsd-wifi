@@ -1,0 +1,35 @@
+doctype html
+html(lang="en", ng-app="index")
+	head
+		meta(name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0')
+		title.
+			pageTitle
+		link(rel='stylesheet' type='text/css' href='vendor/bootstrap/v3.2.0/dist/css/bootstrap.min.css')
+	body
+		hearder
+			br
+		section.container
+			form.row(role='form' ng-controller="indexCtrl")
+				.col-xs-1.col-sm-2.col-md-4
+				.col-xs-10.col-sm-8.col-md-4
+					.row
+						.col-xs-6
+							div.form-group
+								input#firstName.form-control(type='text', placeholder='First Name', ng-model='fname' required)
+						.col-xs-6
+							div.form-group
+								input#lastName.form-control(type='text', placeholder='Last Name', ng-model='lname' required)
+						.col-xs-12
+							div.form-group(ng-class="{'has-error':errorInEmail}")
+								input#inputEmail.form-control(type='email', placeholder='Enter email', ng-model='email' required)
+						.col-xs-6
+							button.btn.btn-primary(ng-click='fetch()').
+								Fetch me some wifi!
+				.col-xs-1.col-sm-2.col-md-4
+
+		script(type='text/javascript', src='vendor/jquery/v2.1.1/jquery.min.js')
+		script(type='text/javascript', src='vendor/angular/v1.3.0/angular.min.js')
+		script(type='text/javascript', src='vendor/bootstrap/v3.2.0/dist/js/bootstrap.min.js')
+		script(type='text/javascript', src='index.min.js')
+		if dev
+			script(type='text/javascript' src='//localhost:35720/livereload.js')
