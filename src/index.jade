@@ -9,7 +9,7 @@ html(lang="en", ng-app="index")
 		hearder
 			br
 		section.container
-			form.row(role='form' ng-controller="indexCtrl")
+			form.row(role='form', ng-controller='indexCtrl', name="mc-embedded-subscribe-form")
 				.col-xs-1.col-sm-2.col-md-4
 				.col-xs-10.col-sm-8.col-md-4
 					.row
@@ -21,7 +21,7 @@ html(lang="en", ng-app="index")
 								input#lastName.form-control(type='text', placeholder='Last Name', ng-model='lname' required)
 						.col-xs-12
 							div.form-group(ng-class="{'has-error':errorInEmail}")
-								input#inputEmail.form-control(type='email', placeholder='Enter email', ng-model='email' required)
+								input#inputEmail.form-control(type='text', placeholder='Enter email', ng-model='email' required)
 						.col-xs-6
 							button.btn.btn-primary(ng-click='fetch()').
 								Fetch me some wifi!
