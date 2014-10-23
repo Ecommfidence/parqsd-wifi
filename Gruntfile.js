@@ -81,84 +81,67 @@ module.exports = function (grunt){
 			// 	}
 			// }
 		}
-    ,uglify: {//javascript
-    	options: {
-    		mangle: false
-    	}
-    	,build: {
-    		options: {
-    			beautify: true
-    		}
-    		,files: {
-    			'build/index.min.js': [
-    				'src/index.module.js'//
-    				,'src/index.ctrl.js'
-    			]//
-    		}
-    	}
-    	,dist: {
-    		options: {
-    			beautify: false
-    		}
-    		,files: {
-    			'dist/index.min.js': [
-    				'src/index.module.js'//
-    				,'src/index.ctrl.js'
-    			]//
-    		}
-    	}
-    }
-    ,copy: {
-    	build: {
-    		files: [{
-    			expand: false
-    			,src: ['vendor/angular/v1.3.0/angular.min.js', 'vendor/angular/v1.3.0/angular.min.js.map']
-    			,dest: 'build/'
-    			,filter: 'isFile'
-    		},
-    		{
-    			src: ['vendor/jquery/v2.1.1/jquery.min.js', 'vendor/jquery/v2.1.1/jquery.min.map']
-    			,dest: 'build/'
-    			,filter: 'isFile'
-    		},
-    		{
-    			src: ['vendor/bootstrap/v3.2.0/dist/css/bootstrap.min.css']
-    			,dest: 'build/'
-    			,filter: 'isFile'
-    		},
-    		{
-    			src: ['vendor/bootstrap/v3.2.0/dist/js/bootstrap.min.js']
-    			,dest: 'build/'
-    			,filter: 'isFile'
-    		}]
-    	}
-    	,dist: {
-    		files: [{
-    			expand: false
-    			,src: ['vendor/angular/v1.3.0/angular.min.js', 'vendor/angular/v1.3.0/angular.min.js.map']
-    			,dest: 'dist/'
-    			,filter: 'isFile'
-    		},
-    		{
-    			expand: false
-    			,src: ['vendor/jQuery/v2.1.1/jquery.min.js', 'vendor/jQuery/v2.1.1/jquery.min.map']
-    			,dest: 'dist/'
-    			,filter: 'isFile'
-    		},
-    		{
-    			expand: false
-    			,src: ['vendor/Bootstrap/v3.2.0/css/bootstrap.min.css']
-    			,dest: 'dist/'
-    			,filter: 'isFile'
-    		},
-    		{
-    			expand: false
-    			,src: ['vendor/Bootstrap/v3.2.0/js/bootstrap.min.js']
-    			,dest: 'dist/'
-    			,filter: 'isFile'
-    		}]
-    	}
-    }
+		,uglify: {//javascript
+			options: {
+				mangle: false
+			}
+			,build: {
+				options: {
+					beautify: true
+				}
+				,files: {
+					'build/index.min.js': [
+						'src/index.module.js'//
+						,'src/index.ctrl.js'
+					]//
+				}
+			}
+			,dist: {
+				options: {
+					beautify: false
+				}
+				,files: {
+					'dist/index.min.js': [
+						'src/index.module.js'//
+						,'src/index.ctrl.js'
+					]//
+				}
+			}
+		}
+		,copy: {
+			build: {
+				files: [{
+					expand: false
+					,filter: 'isFile'
+					,dest: 'build/'
+					,src: [
+						'vendor/angular/v1.3.0/angular.min.js'//
+						,'vendor/angular/v1.3.0/angular.min.js.map'
+						,'vendor/jquery/v2.1.1/jquery.min.js'
+						,'vendor/jquery/v2.1.1/jquery.min.map'
+						,'vendor/bootstrap/v3.2.0/dist/css/bootstrap.min.css'
+						,'vendor/bootstrap/v3.2.0/dist/js/bootstrap.min.js'
+						,'images/*'
+					]//
+				}]
+			}
+			,dist: {
+				files: [{
+					expand: false
+					,filter: 'isFile'
+					,dest: 'dist/'
+					,src: [
+						'vendor/angular/v1.3.0/angular.min.js'//
+						,'vendor/angular/v1.3.0/angular.min.js.map'
+						,'vendor/jQuery/v2.1.1/jquery.min.js'
+						,'vendor/jQuery/v2.1.1/jquery.min.map'
+						,'vendor/Bootstrap/v3.2.0/css/bootstrap.min.css'
+						,'vendor/Bootstrap/v3.2.0/js/bootstrap.min.js'
+						,'images/*'
+					]//
+				}]
+			}
+		}
 	});
 
 	grunt.registerTask('unitTests', ['karma:unit:run']);//
