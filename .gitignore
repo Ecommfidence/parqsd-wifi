@@ -29,3 +29,9 @@ node_modules
 
 # Vendor libraries and others
 vendor/
+
+# Build Folder
+build/
+
+# Distribution Folder
+dist/
