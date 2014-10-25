@@ -1,16 +1,16 @@
 angular.module('index')
-.controller('wifiCtrl', ['$scope', '$timeout', '$http', '$location', function ($scope, $timeout, $http, $location) {
+.controller('wifiCtrl', ['$scope', '$timeout', '$http', '$location', '$rootScope', function ($scope, $timeout, $http, $location, $rootScope) {
 	$scope.errorInEmail = true;
 	$scope.agree = true;
 	$scope.subscribe = true;
-	var subscribed = false;
+	$rootScope.subscribed = false;
 
 	$scope.$watch('email', function (newVal, oldVal){
 		$scope.errorInEmail = newVal && newVal.length > 0 && !/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(newVal);
 	});
 
 	$scope.fetch = function (){
-		if(!subscribed && 
+		if(!$rootScope.subscribed && 
 				$scope.fname && //
 				$scope.fname.length > 0 && 
 				$scope.lname && 
@@ -20,7 +20,7 @@ angular.module('index')
 				!$scope.errorInEmail && 
 				$scope.agree &&
 				$scope.subscribe){
-			subscribed = true;//
+			$rootScope.subscribed = true;//
 			(function crossDomainRequest(params, options) { // Put This in a directive and make the user unable to click the submit more than once (make the post method more than once with the same email)
 				// Add the iframe with a unique name
 				if(!params) return;
