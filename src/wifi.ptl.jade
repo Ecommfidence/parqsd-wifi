@@ -1,0 +1,73 @@
+form(role='form')
+	.col-xs-12.text-center.txt-white
+		p.
+			All Fields Are Required.
+	.col-xs-6
+		.form-group
+			input#firstName.form-control(type='text', placeholder='First Name', ng-model='fname')
+	.col-xs-6
+		.form-group
+			input#lastName.form-control(type='text', placeholder='Last Name', ng-model='lname')
+	.col-xs-12
+		.form-group(ng-class="{'has-error':errorInEmail}")
+			input#inputEmail.form-control(type='text', placeholder='Enter Your Email', ng-model='email')
+	.col-xs-12.checkbox
+		label.txt-white
+			input(type='checkbox', ng-model='agree', ng-true-value="true") 
+			| I agree to Parq's terms and conditions
+	.col-xs-12.checkbox
+		label.txt-white
+			input(type='checkbox', ng-model='subscribe') 
+			|	Sign me up for Parq's newsletters
+	.col-xs-6
+		button.btn.btn-submit.keyboard(ng-click='fetch()', href="/done", ng-disable="errorInEmail").
+			Submit
+
+.col-xs-12
+	br
+	.row
+		.col-xs-12
+			textarea.form-control.text-justify.
+				Complimentary Wi-Fi:
+				Parq Restaurant & Nightclub offers free unlimited Wi-Fi access in its restaurant and nightclub with no access codes requirements but requires a valid email submission.
+
+				Internet connections in its restaurant and nightclub are on a first-come first-served basis.
+
+				Connecting to Parq Restaurant & Nightclub Wi-Fi:
+
+				1) View available wireless networks and select “Parq Guest”
+				2) Open a web browser and enter your desired website
+				3) Indicate that you agree to Parq Restaurant & Nightclub Wi-Fi Terms and Conditions
+
+				Parq Restaurant & Nightclub Patron Wireless Connectivity Policy
+
+				Terms of Service and Acceptable Use:
+				BY CLICKING ON "LOGIN" ON THE WI-FI SYSTEM SIGN-UP PAGE, YOU REPRESENT THAT YOU HAVE READ, UNDERSTAND AND AGREE TO THESE TERMS OFSERVICE.
+				Access to the Service
+				Wi-Fi Service at Parq Restaurant & Nightclub / WSA Entertainment LLC. (“Parq Restaurant & Nightclub”) is a complimentary service for patrons and is completely at the discretion of Parq Restaurant & Nightclub with valid email submission. 
+
+				Service is provided for customers who are actively enjoying their food or beverage purchase. You, as a user of the Service, are responsible for monitoring connectivity and saving all data and communication regularly.
+
+				By your use of the Service, you acknowledge (i) that you have made a purchase; (ii) that the Service may not be uninterrupted or error-free; (iii) that viruses or other harmful applications may travel through the Service; (iv) that Parq Restaurant & Nightclub does not guarantee the security of the Service and that unauthorized third parties may access your computer or files or otherwise monitor your connection; (v) that the Service is provided “as is” and on an “as available” basis, without warranties of any kind, whatsoever; and (vi) that you assume all risk associated with your activities conducted online through the Service and assume all liability and damages incurred by yourself, Parq Restaurant & Nightclub, or a third party that arise or result from your activities conducted online through the Service, whether known or unknown at the time of use.
+
+				By submitting a valid email address, you are agreeing to receive email communications to the email address provided from Parq Restaurant & Nightclub. You will only ever receive information directly from Parq Restaurant & Nightclub. You can delete or change your email address or unsubscribe at any time.
+
+				Access to the Service may be denied, blocked, suspended, or terminated by Parq Restaurant & Nightclub at any time for any reason including, but not limited to, violation of these Terms of Service, actions that may lead to liability for Parq Restaurant & Nightclub, disruption of access to other patrons or networks, and violation of applicable local, state, and, or federal laws or regulations. 
+
+				Use of the Service shall not be construed as creating a relationship of any kind between Parq Restaurant & Nightclub and any user of the Service. These Terms of Service shall be governed, interpreted and construed according to the laws of the state of California.
+
+				Acceptable Use of the Service:
+				Activities conducted online through the Service shall not violate any applicable law or regulation or the rights of Parq Restaurant & Nightclub, or any third party. Parq Restaurant & Nightclub will fully cooperate with law enforcement upon receipt of notice that use of the Service is in violation of applicable law. If you are unsure whether your use of the Service and activities conducted online may violate these Terms of Service you are advised to cease the activity immediately. 
+
+				Examples of prohibited activities include, but are not limited to:
+				Spamming and Invasion of Privacy
+				Intellectual Property Right Violations
+				Obscene or Indecent Speech or Materials
+				Defamatory or Abusive Language
+				Forging of Headers
+				Hacking, Scans, or Other Subversive Information Gathering Activity
+				Distribution of Internet Viruses, Trojan Horses, or Other Destructive Activities
+				Export Control Violations
+				Harassing, Abusive, Criminal or Fraudulent activities
+				Facilitating a Violation of this Agreement of Use
+				Resale of the Service

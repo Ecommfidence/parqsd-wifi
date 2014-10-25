@@ -1,1 +1,1 @@
-angular.module('index', []);
+angular.module('index', ['ngRoute']);

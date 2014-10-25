@@ -1,35 +1,55 @@
 doctype html
 html(lang="en", ng-app="index")
 	head
-		meta(name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0')
 		title.
 			pageTitle
-		link(rel='stylesheet' type='text/css' href='vendor/bootstrap/v3.2.0/dist/css/bootstrap.min.css')
-	body
+		link(rel='stylesheet', type='text/css', href='vendor/bootstrap/v3.2.0/dist/css/bootstrap.min.css')
+		link(rel='stylesheet', type='text/css', href='index.css')
+		link(rel='stylesheet', type='text/css', href='vendor/fontawesome/v4.2.0/css/font-awesome.min.css')
+	body.parq-bg-image
 		hearder
-			br
+			nav.navbar.navbar-inverse.img-height(role='navigation')
+				.container-fluid
+					.navbar-header
+						.row
+							.col-xs-12
+								a.navbar-brand(href='http://www.parqsd.com')
+									img.img-responsive(src='images/logo.png')
 		section.container
-			form.row(role='form', ng-controller='indexCtrl', name="mc-embedded-subscribe-form")
+			.row
 				.col-xs-1.col-sm-2.col-md-4
 				.col-xs-10.col-sm-8.col-md-4
-					.row
-						.col-xs-6
-							div.form-group
-								input#firstName.form-control(type='text', placeholder='First Name', ng-model='fname' required)
-						.col-xs-6
-							div.form-group
-								input#lastName.form-control(type='text', placeholder='Last Name', ng-model='lname' required)
-						.col-xs-12
-							div.form-group(ng-class="{'has-error':errorInEmail}")
-								input#inputEmail.form-control(type='text', placeholder='Enter email', ng-model='email' required)
-						.col-xs-6
-							button.btn.btn-primary(ng-click='fetch()').
-								Fetch me some wifi!
+					div(ng-view='')
 				.col-xs-1.col-sm-2.col-md-4
+		.footer-wrapper.wrapper
+			footer.navbar.navbar-inverse.navbar-fixed-bottom.img-height
+				.container
+					.row
+						.col-sm-4.text-center
+							ul.hz-list
+								li
+									a(href="https://www.facebook.com/parqsd", target="_blank", title="Facebook")
+										i.fa.fa-facebook-square.fa-2x
+								li
+									a(href="https://twitter.com/parqsd", target="_blank", title="Twitter")
+										i.fa.fa-twitter-square.fa-2x
+								li
+									a(href="https://instagram.com/parqsd", target="_blank", title="Instagram")
+										i.fa.fa-instagram.fa-2x
+						.col-sm-8.tc.copyright
+							p.text-center.txt-white
+								|	&copy; 2014 Parq Restaurant &amp; Nightclub
+							p.text-center.txt-white
+								|	powered by
+								a(href="http://anthro.is",target="_blank")
+									|	anthro.is 
+								| a digital partner &amp; platform
 
 		script(type='text/javascript', src='vendor/jquery/v2.1.1/jquery.min.js')
 		script(type='text/javascript', src='vendor/angular/v1.3.0/angular.min.js')
+		script(type='text/javascript', src='vendor/angular/v1.3.0/angular-route.min.js')
 		script(type='text/javascript', src='vendor/bootstrap/v3.2.0/dist/js/bootstrap.min.js')
 		script(type='text/javascript', src='index.min.js')
-		if dev
-			script(type='text/javascript' src='//localhost:35720/livereload.js')
+		//- if dev
+			//- script(type='text/javascript' src='//localhost:35720/livereload.js')
