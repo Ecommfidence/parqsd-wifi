@@ -112,6 +112,7 @@ module.exports = function (grunt){
 				,files: {
 					'dist/index.min.js': [
 						'src/index.module.js'//
+						,'src/index.routes.js'
 						,'src/index.ctrl.js'
 						,'src/wifi.ctrl.js'
 						,'src/done.ctrl.js'
@@ -150,10 +151,10 @@ module.exports = function (grunt){
 						,'vendor/angular/v1.3.0/angular.min.js.map'
 						,'vendor/angular/v1.3.0/angular-route.min.js'
 						,'vendor/angular/v1.3.0/angular-route.min.js.map'
-						,'vendor/jQuery/v2.1.1/jquery.min.js'
-						,'vendor/jQuery/v2.1.1/jquery.min.map'
-						,'vendor/Bootstrap/v3.2.0/css/bootstrap.min.css'
-						,'vendor/Bootstrap/v3.2.0/js/bootstrap.min.js'
+						,'vendor/jquery/v2.1.1/jquery.min.js'
+						,'vendor/jquery/v2.1.1/jquery.min.map'
+						,'vendor/bootstrap/v3.2.0/dist/css/bootstrap.min.css'
+						,'vendor/bootstrap/v3.2.0/dist/js/bootstrap.min.js'
 						,'vendor/fontawesome/v4.2.0/css/font-awesome.min.css'
 						,'vendor/fontawesome/v4.2.0/fonts/*'
 						,'images/*'
